@@ -1,0 +1,18 @@
+package task5;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+//class Ramesh
+public class Ramesh {
+    //main method
+    public static void main(String[] args) {
+        //list of student names
+        List<String> stdNames = Arrays.asList("Shameer","Aravind","Akshay","Inayat","Harini","Sivaji","Arun","Suhail","Anand","Balu");
+        //list of filtered students
+        List<String> filteredStds = stdNames.stream().filter(n->n.startsWith("A")).collect(Collectors.toList());
+        System.out.println(filteredStds);
+    }
+}
+//OUTPUT
+[Aravind, Akshay, Arun, Anand]

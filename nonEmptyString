@@ -1,0 +1,20 @@
+package task5;
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+//Main class
+public class DriverMain {
+    //main method
+    public static void main(String[] args){
+        //creating a list of string
+        List<String> list =Arrays.asList("abc","","bc","efg","abcd","","jkl");
+        //stream to filter out empty string
+        List<String> nonempty = list.stream().filter(str->!str.isEmpty()).collect(Collectors.toList());
+        System.out.println(nonempty);
+
+    }
+
+
+}
+//OUTPUT
+[abc, bc, efg, abcd, jkl]

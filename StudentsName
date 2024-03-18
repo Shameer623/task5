@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 //class Ramesh
-public class Ramesh {
+public class Student {
     //main method
     public static void main(String[] args) {
         //list of student names

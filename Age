@@ -1,0 +1,26 @@
+package task5;
+
+import java.time.LocalDate;
+import java.time.Period;
+import java.util.Scanner;
+// class Agecalc
+public class Agecalc {
+//main method
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter birthdate(yyyy-mm-dd)");
+//getting birthdate from user
+        String birthdate = sc.nextLine();
+        LocalDate date=LocalDate.parse(birthdate);
+//today's date
+        LocalDate currentdate =LocalDate.now();
+//calculating the age
+        Period age = Period.between(date,currentdate);
+        System.out.println("your age :" +age.getYears()+" years, "+ age.getMonths()+" months, "+ age.getDays()+" days");
+    }
+}
+
+//OUTPUT
+Enter birthdate(yyyy-mm-dd)
+2003-02-06
+your age :21 years, 1 months, 13 days
